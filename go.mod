@@ -10,7 +10,7 @@ replace (
 	github.com/mdlayher/ethtool => github.com/siderolabs/ethtool v0.4.0-sidero
 
 	// see https://github.com/mdlayher/kobject/pull/5
-	github.com/mdlayher/kobject => github.com/smira/kobject v0.0.0-20240304111826-49c8d4613389
+	github.com/mdlayher/kobject => github.com/smira/kobject 19ca17470d7d
 
 	// Use nested module.
 	github.com/siderolabs/talos/pkg/machinery => ./pkg/machinery
@@ -22,12 +22,12 @@ replace (
 // deadcode elimination fix replacement: https://github.com/siderolabs/talos/issues/11296
 // upstream PR: https://github.com/containerd/containerd/pull/12175
 // this a fork with containerd 2.2 branch + the commit from the PR above
-replace github.com/containerd/containerd/v2 => github.com/smira/containerd/v2 v2.2.3-0.20260311174942-e5fa687ba763
+replace github.com/containerd/containerd/v2 => github.com/smira/containerd/v2 ddf6594fbeed
 
 // downgrade the go-containerregistry to workaround the security changes in
 // https://github.com/google/go-containerregistry/pull/2227/changes: it breaks
 // our extensions
-replace github.com/google/go-containerregistry => github.com/google/go-containerregistry v0.21.2
+replace github.com/google/go-containerregistry => github.com/google/go-containerregistry v0.21.3
 
 // Kubernetes dependencies sharing the same version.
 require (
@@ -58,13 +58,13 @@ require (
 	github.com/aws/smithy-go v1.24.2
 	github.com/beevik/ntp v1.5.0
 	github.com/blang/semver/v4 v4.0.0
-	github.com/cenkalti/backoff/v4 v4.3.0
+	github.com/cenkalti/backoff/v5 v5.0.3
 	github.com/containerd/cgroups/v3 v3.1.3
 	github.com/containerd/containerd/api v1.10.0
 	github.com/containerd/containerd/v2 v2.2.2
 	github.com/containerd/errdefs v1.0.0
 	github.com/containerd/log v0.1.0
-	github.com/containerd/platforms v1.0.0-rc.2
+	github.com/containerd/platforms v1.0.0-rc.3
 	github.com/containerd/typeurl/v2 v2.2.3
 	github.com/containernetworking/cni v1.3.0
 	github.com/containernetworking/plugins v1.9.1
@@ -73,17 +73,17 @@ require (
 	github.com/cosi-project/runtime v1.14.1
 	github.com/detailyang/go-fallocate v0.0.0-20180908115635-432fa640bd2e
 	github.com/distribution/reference v0.6.0
-	github.com/docker/cli v29.3.0+incompatible
+	github.com/docker/cli v29.3.1+incompatible
 	github.com/dustin/go-humanize v1.0.1
 	github.com/elastic/go-libaudit/v2 v2.6.2
 	github.com/equinix-ms/go-vmw-guestrpc v1.0.0
-	github.com/fatih/color v1.18.0
+	github.com/fatih/color v1.19.0
 	github.com/florianl/go-tc v0.4.7
 	github.com/foxboron/go-uefi v0.0.0-20251010190908-d29549a44f29
 	github.com/freddierice/go-losetup/v2 v2.0.1
 	github.com/fsnotify/fsnotify v1.9.0
 	github.com/g0rbe/go-chattr v1.0.1
-	github.com/gdamore/tcell/v2 v2.13.8
+	github.com/gdamore/tcell/v3 v3.1.2
 	github.com/gertd/go-pluralize v0.2.1
 	github.com/godbus/dbus/v5 v5.2.2
 	github.com/golang/mock v1.7.0-rc.1
@@ -101,7 +101,7 @@ require (
 	github.com/hashicorp/go-getter/v2 v2.2.3
 	github.com/hashicorp/go-multierror v1.1.1
 	github.com/hetznercloud/hcloud-go/v2 v2.36.0
-	github.com/insomniacslk/dhcp v0.0.0-20260220084031-5adc3eb26f91
+	github.com/insomniacslk/dhcp 991c7910cf36
 	github.com/jeromer/syslogparser v1.1.0
 	github.com/jsimonetti/rtnetlink/v2 v2.2.1-0.20260317095713-310581b9c6ac
 	github.com/jxskiss/base62 v1.1.0
@@ -126,7 +126,7 @@ require (
 	github.com/opencontainers/image-spec v1.1.1
 	github.com/opencontainers/runtime-spec v1.3.0
 	github.com/packethost/packngo v0.31.0
-	github.com/pelletier/go-toml/v2 v2.2.4
+	github.com/pelletier/go-toml/v2 v2.3.0
 	github.com/pin/tftp/v3 v3.2.0
 	github.com/pkg/xattr v0.4.12
 	github.com/pmorjan/kmod v1.1.1
@@ -157,7 +157,7 @@ require (
 	github.com/siderolabs/go-retry v0.3.3
 	github.com/siderolabs/go-smbios v0.3.3
 	github.com/siderolabs/go-tail v0.1.1
-	github.com/siderolabs/go-talos-support v0.1.4
+	github.com/siderolabs/go-talos-support v0.2.0
 	github.com/siderolabs/grpc-proxy v0.5.1
 	github.com/siderolabs/kms-client v0.2.0
 	github.com/siderolabs/net v0.4.0
@@ -165,7 +165,7 @@ require (
 	github.com/siderolabs/siderolink v0.3.15
 	github.com/siderolabs/talos/pkg/machinery v1.13.0-beta.0
 	github.com/sigstore/cosign/v3 v3.0.5
-	github.com/sigstore/sigstore v1.10.5-0.20260304232115-b56c8664d026
+	github.com/sigstore/sigstore c90de3e0ff95
 	github.com/sigstore/sigstore-go v1.1.4
 	github.com/sirupsen/logrus v1.9.4
 	github.com/spf13/cobra v1.10.2
